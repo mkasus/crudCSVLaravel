@@ -2,13 +2,6 @@
 
 namespace App;
 
-const CSV_FILE = 'adressBook.csv';
-const CID=0;
-const CNAME=1;
-const CLASTNAME=2;
-const CEMAIL=3;
-const CTEL=4;
-const CFILE=5;
 
 class Contact {
     public $id;
@@ -76,7 +69,7 @@ function updateContact(Contact $contact){
     }
     $fp = fopen(CSV_FILE, 'w');
     if(! $fp){
-      printf('Nie udało się otworzyć pliku %s. Prosimy spróbować później', CSV_FILE);
+      printf('Nie udało się otworzyć pliku %s.', CSV_FILE);
       exit;
     }
     if ($fp) {
